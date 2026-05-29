@@ -34,7 +34,7 @@ class Circle(Shape):
         return 2 * math.pi * self.radius
     
     def draw(self) -> str:
-    return '◉'
+        return '◉'
 
 class Rectangle(Shape):
     def __init__(self, width: float, height: float):
@@ -48,7 +48,7 @@ class Rectangle(Shape):
         return 2 * (self.width + self.height)
     
     def draw(self) -> str:
-    return '█'
+        return '█'
 
 class Triangle(Shape):
     def __init__(self, side_a: float, side_b: float, side_c: float):
@@ -68,4 +68,48 @@ class Triangle(Shape):
         return self.a + self.b + self.c
     
     def draw(self) -> str:
-    return '▲'
+        return '▲'
+
+class Canvas:
+    """Управляет коллекцией фигур и операциями над ними"""
+    
+    def __init__(self):
+        self._shapes = []  # инкапсуляция — список фигур скрыт
+    
+    def add_shape(self, shape: Shape):
+        """Добавляет фигуру на холст (полиморфизм на входе)"""
+        self._shapes.append(shape)
+        print(f"✓ Добавлена: {shape}")
+    
+    def remove_shape(self, index: int):
+        """Удаляет фигуру по индексу"""
+        if 0 <= index < len(self._shapes):
+            removed = self._shapes.pop(index)
+            print(f"✗ Удалена: {removed}")
+        else:
+            print("Неверный индекс")
+    
+    def total_area(self) -> float:
+        """Суммарная площадь всех фигур"""
+        return sum(shape.area() for shape in self._shapes)
+    
+    def total_perimeter(self) -> float:
+        """Суммарный периметр всех фигур"""
+        return sum(shape.perimeter() for shape in self._shapes)
+    
+    def draw_all(self):
+        """Отрисовывает все фигуры"""
+        if not self._shapes:
+            print("Холст пуст")
+            return
+        for i, shape in enumerate(self._shapes):
+            print(f"\n--- Фигура {i} ({shape.__class__.__name__}) ---")
+            print(shape.draw())
+            print(shape)
+    
+    def get_shapes(self):
+        """Возвращает список фигур (для итерации)"""
+        return self._shapes.copy()
+    
+    def __len__(self):
+        return len(self._shapes)
