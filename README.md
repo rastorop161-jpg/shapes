@@ -26,7 +26,7 @@ main.py - пользовательский интерфейс
 Python 3.6
 
 #EN
-# Geometric shapes, canvas.
+# Geometric shapes, canvas
 
 A program for calculating data about geometric figures.
 
