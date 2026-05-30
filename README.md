@@ -10,16 +10,20 @@
 - Взаимодействие с холстом: удаление фигур по индексу, минималистичное отображение знаков фигур в терминале.
 
 ## Запуск
+### Для Windows
+
+cd /путь/к/проекту␣
+python main.py␣
+
+### Для Linux
 
 cd /путь/к/проекту
-
-python main.py   #win
-python3 main.py  #lin
+python3 main.py  
 
 ## Структура
 
-shapes.py - описание классов фигур, класса холста
-main.py - пользовательский интерфейс
+- shapes.py - описание классов фигур, класса холста.
+- main.py - пользовательский интерфейс.
 
 ## Требования
 
@@ -38,16 +42,20 @@ A program for calculating data about geometric figures.
 - Work with canvas: delete figures by index, print text-based images of figures in the terminal.
 
 ## Start
+### For Windows
 
-cd /path/project
+cd /path/project␣
+python main.py␣  
 
-python main.py   #Windows
-python3 main.py  #Linux
+### For Linux
+
+cd /path/project␣
+python3 main.py␣
 
 ## Structure
 
-shapes.py - description of classes of figures, the canvas class
-main.py - user interface
+- shapes.py - description of classes of figures, the canvas class.
+- main.py - user interface.
 
 ## Requirements
 
