@@ -1,3 +1,5 @@
+from shapes import Circle, Rectangle, Triangle, Canvas
+
 def main():
     canvas = Canvas()
     
