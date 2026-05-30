@@ -18,7 +18,7 @@ python3 main.py  #lin
 
 ## Структура
 
-shapes.py - описание классов фигур, класса холста.
+shapes.py - описание классов фигур, класса холста
 main.py - пользовательский интерфейс
 
 ## Требования
@@ -46,8 +46,8 @@ python3 main.py  #Linux
 
 ## Structure
 
-shapes.py - description of classes of figures, the canvas class.
-main.py - user interface.
+shapes.py - description of classes of figures, the canvas class
+main.py - user interface
 
 ## Requirements
 
